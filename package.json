@@ -1,0 +1,23 @@
+{
+  "name": "socketio-log",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "author": "Akshit Khajuria",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^4.6.1",
+    "socketio-wildcard": "^2.0.0",
+    "winston": "^3.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.2",
+    "@babel/register": "^7.21.0",
+    "nodemon": "^2.0.22"
+  }
+}
