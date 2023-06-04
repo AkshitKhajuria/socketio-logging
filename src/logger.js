@@ -11,18 +11,14 @@ const {
 } = winston;
 
 // Custom formatter to replicate console.log behaviour
-const combineMessageAndSplat = () => {
-  return {
-    transform: (info) => {
-      //combine message and args if any
-      info.message = util.format(
-        info.message,
-        ...(info[Symbol.for("splat")] || [])
-      );
-      return info;
-    },
-  };
-};
+const combineMessageAndSplat = format((info, opts) => {
+  //combine message and args if any
+  info.message = util.format(
+    info.message,
+    ...(info[Symbol.for("splat")] || [])
+  );
+  return info;
+});
 
 /******* Define Transports *******/
 /**
